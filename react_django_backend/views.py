@@ -1,5 +1,6 @@
 from django.http import JsonResponse
 from .models import User
+from .models import Employee
 from .serializers import UserSerializer, EmployeeSerializer
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
