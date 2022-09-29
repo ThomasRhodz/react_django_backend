@@ -33,7 +33,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'corsheaders',
     'rest_framework',
-    'react_django_crud',
+    'react_django_backend',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -61,7 +61,7 @@ CORS_ALLOWED_ORIGINS = [
     "http://127.0.0.1:9000",
 ]
 
-ROOT_URLCONF = 'react_django_crud.urls'
+ROOT_URLCONF = 'react_django_backend.urls'
 
 TEMPLATES = [
     {
@@ -79,7 +79,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'react_django_crud.wsgi.application'
+WSGI_APPLICATION = 'react_django_backend.wsgi.application'
 
 
 # Database

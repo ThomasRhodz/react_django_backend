@@ -1,4 +1,4 @@
-"""react_django_crud URL Configuration
+"""react_django_backend URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.1/topics/http/urls/
@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from react_django_crud import views
+from react_django_backend import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -23,4 +23,9 @@ urlpatterns = [
     path('user/status/1', views.user_active),
     path('user/status/0', views.user_inActive),
     path('user/<int:id>', views.user_detail),
+
+    path('employee/', views.employee_list),
+    path('employee/status/1', views.employee_active),
+    path('employee/status/0', views.employee_inActive),
+    path('employee/<int:id>', views.employee_detail),
 ]
