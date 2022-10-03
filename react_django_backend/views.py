@@ -49,6 +49,11 @@ def user_detail(request, id):
 
 # With filters
 
+def user_log(request, user_email, user_password):
+    users = User.objects.filter(email__iexact= user_email, password__iexact=user_password)
+    serializer = UserSerializer(users, many=True)
+    return JsonResponse({'data': serializer.data})
+
 def user_active(request):
     users = User.objects.filter(isActive='Yes')
     serializer = UserSerializer(users, many=True)
@@ -102,6 +107,12 @@ def employee_detail(request, id):
 
 
 # With filters
+
+def employee_log(request, employee_email, employee_password):
+    employees = Employee.objects.filter(email__iexact= employee_email, password__iexact=employee_password)
+    serializer = EmployeeSerializer(employees, many=True)
+    return JsonResponse({'data': serializer.data})
+
 
 def employee_active(request):
     employees = Employee.objects.filter(isActive='Yes')

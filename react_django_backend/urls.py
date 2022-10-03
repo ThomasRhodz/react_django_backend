@@ -23,9 +23,11 @@ urlpatterns = [
     path('user/status/1', views.user_active),
     path('user/status/0', views.user_inActive),
     path('user/<int:id>', views.user_detail),
+    path('user/<str:user_email>/<str:user_password>', views.user_log),
 
     path('employee/', views.employee_list),
     path('employee/status/1', views.employee_active),
     path('employee/status/0', views.employee_inActive),
     path('employee/<int:id>', views.employee_detail),
+    path('employee/<str:employee_email>/<str:employee_password>', views.employee_log),
 ]
