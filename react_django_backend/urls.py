@@ -32,7 +32,7 @@ urlpatterns = [
     path('employee/<str:employee_email>/<str:employee_password>', views.employee_log),
 
     path('post/', views.post_list),
-    path('post/status/1', views.post_toBeReview),
+    path('post/status/2', views.post_toBeReview),
     path('post/status/1', views.post_passed),
     path('post/status/0', views.post_rejected),
     path('post/<int:id>', views.post_detail),
